@@ -14,7 +14,7 @@ for td in tds:
   scraperwiki.sqlite.save(["td"], record) # save the records one by one
   print td.tag # just the text inside the HTML tag
 for td in tds:
-  record = { "td" : [td.attrib['href']] } # column name and value
+  record = { "td" : td.attrib['a href'] } # column name and value
   scraperwiki.sqlite.save(["td"], record) # save the records one by one
   print td.attrib['href']# just the text inside the HTML tag
 for td in tds:
